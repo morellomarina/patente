@@ -1,4 +1,4 @@
-const LicençaDePatente = [
+const LicencaDePatente = [
 	{
 		"constant": true,
 		"inputs": [],
