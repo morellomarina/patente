@@ -25,10 +25,12 @@ contract LicencaPatente {
         detentor = qualDetentor;
     }
 	
-    function receberPeloUso() public payable {
+    function receberLicença() public payable {
         require(msg.value >= 100 szabo, "Por favor pague o valor mínimo");
-        if (agente != address(0)) {
-            agente.transfer((msg.value * 10) / 100);
-        }
+        if (detentor != address(0)) {
+            detentor.transfer((msg.value * 25) / 100);
+	else (licenciado != address(0)) {
+            licenciado.transfer; }    
     }
+  }
 }
