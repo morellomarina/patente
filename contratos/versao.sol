@@ -4,10 +4,10 @@ contract LicencaPatente {
 	
     string public nomeEmpresa;
     address detentor;
-    address ARTISTA;
+    address licenciado;
 	
-    modifier somenteArtista() {
-        require(msg.sender==artista, "Somente artista pode realizar essa operação");
+    modifier somenteLicenciado() {
+        require(msg.sender==licenciado, "Somente a Empresa Morello Ltda. pode realizar essa operação");
         _;
     }
 
@@ -20,7 +20,7 @@ contract LicencaPatente {
         nomeEmpresa = qualNomeDaEmpresa;
     }
 
-    function definirDetentor(address qualDetentor) public somenteArtista  {
+    function definirDetentor(address qualDetentor) public somenteLicenciado  {
         require(qualDetentor != address(0), "Endereço de agente invalido");
         detentor = qualDetentor;
     }
