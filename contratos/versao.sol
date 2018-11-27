@@ -1,6 +1,6 @@
 pragma solidity 0.4.25;
 
-contract LicencaPatente {
+contract LicencaDePatente {
 	
     string public nomeEmpresa;
     address detentor;
@@ -13,19 +13,19 @@ contract LicencaPatente {
 
     constructor() public {
         nomeEmpresa = "Artista SuperPop Ltda";
-        artista = msg.sender;
+        licenciado = msg.sender;
     }
 	
-    function definirNomeDaEmpresa(string qualNomeDaEmpresa) public somenteArtista  {
+    function definirNomeDaEmpresa(string qualNomeDaEmpresa) public somenteLicenciado  {
         nomeEmpresa = qualNomeDaEmpresa;
     }
 
     function definirDetentor(address qualDetentor) public somenteLicenciado  {
-        require(qualDetentor != address(0), "Endereço de agente invalido");
+        require(qualDetentor != address(0), "Endereço do detentor da Patente inválido");
         detentor = qualDetentor;
     }
 	
-    function receberLicença() public payable {
+    function receberPeloServiço() public payable {
         require(msg.value >= 100 szabo, "Por favor pague o valor mínimo");
         if (detentor != address(0)) {
             detentor.transfer((msg.value * 25) / 100);
