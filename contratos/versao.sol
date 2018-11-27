@@ -1,10 +1,10 @@
 pragma solidity 0.4.25;
 
-contract UsoDeImagem {
+contract LicencaPatente {
 	
     string public nomeEmpresa;
-    address agente;
-    address artista;
+    address detentor;
+    address ARTISTA;
 	
     modifier somenteArtista() {
         require(msg.sender==artista, "Somente artista pode realizar essa operação");
@@ -20,9 +20,9 @@ contract UsoDeImagem {
         nomeEmpresa = qualNomeDaEmpresa;
     }
 
-    function definirAgente(address qualAgente) public somenteArtista  {
-        require(qualAgente != address(0), "Endereço de agente invalido");
-        agente = qualAgente;
+    function definirDetentor(address qualDetentor) public somenteArtista  {
+        require(qualDetentor != address(0), "Endereço de agente invalido");
+        detentor = qualDetentor;
     }
 	
     function receberPeloUso() public payable {
