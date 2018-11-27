@@ -1,4 +1,4 @@
-const contratoUsoDeImagemABI = [
+const contratoUsoDePatente = [
 	{
 		"constant": true,
 		"inputs": [],
