@@ -1,4 +1,4 @@
-const contratoUsoDePatente = [
+const LicençaDePatente = [
 	{
 		"constant": true,
 		"inputs": [],
@@ -26,11 +26,11 @@ const contratoUsoDePatente = [
 		"constant": false,
 		"inputs": [
 			{
-				"name": "qualAgente",
+				"name": "qualDetentor",
 				"type": "address"
 			}
 		],
-		"name": "definirAgente",
+		"name": "definirDetentor",
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",
