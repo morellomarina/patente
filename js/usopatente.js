@@ -16,7 +16,7 @@ const LicencaDePatente = [
 	{
 		"constant": false,
 		"inputs": [],
-		"name": "receberPeloUso",
+		"name": "receberPeloServiço",
 		"outputs": [],
 		"payable": true,
 		"stateMutability": "payable",
