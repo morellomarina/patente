@@ -12,7 +12,7 @@ contract LicencaDePatente {
     }
 
     constructor() public {
-        nomeEmpresa = "Artista SuperPop Ltda";
+        nomeEmpresa = "Abbud S.A.";
         licenciado = msg.sender;
     }
 	
@@ -25,12 +25,11 @@ contract LicencaDePatente {
         detentor = qualDetentor;
     }
 	
-    function receberPeloServiço() public payable {
+    function receberPeloUso() public payable {
         require(msg.value >= 100 szabo, "Por favor pague o valor mínimo");
         if (detentor != address(0)) {
             detentor.transfer((msg.value * 25) / 100);
-	else (licenciado != address(0)) {
-            licenciado.transfer; }    
+        }
+	    licenciado.transfer(address(this).balance);
     }
-  }
 }
